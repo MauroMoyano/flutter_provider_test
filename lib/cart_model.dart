@@ -9,4 +9,12 @@ class CartModel extends ChangeNotifier {
     _items.add(item);
     notifyListeners();
   }
+
+  void removeLastItem() {
+    if(_items.isNotEmpty) {
+      items.removeLast();
+      notifyListeners();
+    }
+  }
+
 }
